@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/real_trac
+    username: postgres
+    password: postgres
+    initialization-mode: always
+    schema: classpath*:database/initDB.sql
+  jpa:
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false
+server:
+    port: 8090
